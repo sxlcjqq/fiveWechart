@@ -1,0 +1,66 @@
+/**app.wxss**/
+page,view,textarea,input{
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  font-family: '微软雅黑';
+}
+.container {
+  height: 100%;
+  /* display: flex; */
+    display: block;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 0 0;
+  box-sizing: border-box;
+  font-family: '微软雅黑';
+} 
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.lf0{
+  font-size: 0;
+  line-height: 0;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float: right;
+}
+
+.clear:before,
+.clear:after{display: table;content: " ";}
+.clear:after{clear: both;}
+.showModule {
+ /* 用样式控制隐藏 visibility: hidden;*//* flex 布局 */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* 生成绝对定位的元素，相对于浏览器窗口进行定位 */
+ position: fixed;
+ /* 如果 height,width 不变的情况下，left,top 不用修改 */
+ left: 35%;
+ top: 40%;
+ line-height: 3;
+ padding: 0 40rpx;
+ /* 不透明 */
+ opacity: 0.99;
+ background-color: #7b7b7b;
+}
+ 
+.showModule .text {
+ /* flex 布局 */
+ display: flex;
+ /* 字体加粗 */
+ color: white;
+ font-size: 28rpx;
+ font-family: "微软雅黑";
+}

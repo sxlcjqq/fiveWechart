@@ -1,0 +1,200 @@
+/* index.wxss */
+.container{
+    /* border: 1px solid #eee;
+    border-radius: 6px;
+    margin: 20rpx;
+    padding:20rpx 0 40rpx; */
+padding-bottom:80rpx;
+}
+.listdiv{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  padding: 20rpx 0rpx;
+}
+.listdiv .bg{
+  display: block;
+  height: 400rpx;
+  width: 100%;
+}
+.listdiv .price{
+  right: 0rpx;
+  top: 340rpx;
+  position: absolute;
+  font-size: 34rpx;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  padding:10rpx 20rpx;
+  background: rgba(0,0,0,0.5);
+}
+.listdiv .name{
+  font-size: 34rpx;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.listdiv .area{
+  font-size: 20rpx;
+  color: #666666;
+  line-height: 1.5;
+  border: 1rpx solid #999999;
+  padding:5rpx 10rpx;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+}
+.listdiv .star{
+width: 45rpx;
+height: 45rpx;
+display: inline-block;
+margin: 10rpx 0 0;
+vertical-align: middle;
+}
+.listdiv .address{
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 1.5;
+  margin-top:10rpx;
+}
+.oneline{
+  padding: 10rpx;
+  margin: 10rpx 20rpx;
+  border:1rpx solid #333;
+  border-radius: 5rpx;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+.list{
+ font-size: 30rpx;
+ color: #333333;
+ padding-left: 40rpx;
+ width: 25%;
+ padding: 15rpx;
+ display: inline-block;
+ vertical-align: top;
+  line-height: 2;
+}
+.listborder{
+  border-bottom:1rpx solid #333333;
+}
+.list .listimg{
+  width: 25rpx;
+  height: 25rpx;
+}
+.list .block{
+border:1px solid #333333;
+padding:0 5rpx;
+border-radius: 5rpx;
+text-align: center;
+}
+.list.active .block{
+border:1px solid #ff4444;
+color:#ff4444;
+}
+button[type="primary"] {
+color:#FFFFFF;
+background-color:#ff4444;
+margin:20rpx 10rpx 10rpx;
+}
+.iconimg{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx 15rpx 5rpx 0;
+}
+.f30{
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.widthimage{
+  height: 300rpx;
+  display: block;
+  width: 100%;
+  margin: 10rpx 0;
+}
+.exclass{
+  position: relative;
+}
+.bottomtext{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  color: #ffffff;
+  font-size: 25rpx;
+  padding: 10rpx;
+  line-height: 1.5;
+}
+.bottomtext .span{
+ width: 25%;
+ float: left;
+}
+.list .listimg.big {
+width:35rpx;
+height:35rpx;
+margin: 0 20rpx;
+vertical-align: middle;
+}
+.detailtext{
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 1.5;
+  border:1px solid #999999;
+  border-radius: 10rpx;
+  padding: 15rpx;
+  width: 100%;
+  min-height: 100rpx;
+  display: block;
+  text-align: left;
+  position: static;
+}
+.map_container{ 
+    height: 300px; 
+    padding:20rpx;
+} 
+.bottombtn{
+width: 96%;
+line-height: 2.5;
+border-radius: 5rpx;
+font-size: 26rpx;
+text-align: center;
+color: #ffffff;
+margin-left:2%;
+}
+.bottombtn.red{
+  background-color: #ff4444;
+}
+.numberinput{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100rpx;
+  border: none;
+}
+.nameinput{
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 1.5;
+  border:1px solid #999999;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+.noborder{
+  border:none;
+}
+.noborder .input{
+  display: inline-block;vertical-align:middle;
+width:200rpx;height:1.4rem;
+line-height: 1.4rem;
+
+}
+.noborder input,.noborder .input{
+  border:1px solid #999999;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+}

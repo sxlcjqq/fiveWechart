@@ -1,0 +1,22 @@
+<!--pages/five/index.wxml-->
+<view wx:if="{{ifshowset}}">
+<view class='text-center'>设置</view>
+  <view class='label'>请输入房间号：</view>
+  <input class="input" bindinput="roomid" placeholder=""/>
+  <view class='label'>请输入密码：</view>
+  <input class="input"  bindinput="password" placeholder=""/>
+  <view class='label' style='margin-bottom:20rpx;'>是否是白棋：<switch checked bindchange="switch1Change"/></view>
+</view>
+  <button type='primary' bindtap="start">{{ifshowset?'联机开始':'重置房间'}}</button>
+  <button type='' bindtap="startByselft">自娱自乐</button>
+<view wx:if="{{!ifshowset}}" class='box '>
+<view wx:for="{{rownum}}" class='clear' wx:for-index="i" >
+<view class="grid" wx:for="{{colnum}}" wx:for-index="j" bindtap='putPoint' data-col="{{j}}" data-row="{{i}}">
+<view class='col'></view>
+<view class='row'></view>
+<view class="{{realPoint[i][j]==1?'white-chess':'black-chess'}}" wx:if="{{realPoint[i][j]}}"></view>
+<!-- <view class='white-chess' ></view> -->
+<!-- <view class='black-chess'></view> -->
+</view>
+</view>
+</view>

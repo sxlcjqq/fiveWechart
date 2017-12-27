@@ -1,0 +1,35 @@
+<view class="  box-align-center" style='padding-bottom:80rpx;position:relative;height:100%;'>
+  <view class="lf0" style='height:50%;margin:0 20rpx;padding-bottom:80rpx;position:relative;'>
+    <view class='chooseData'>
+      <view class='text'>开始时间</view>
+      <view class='timescroll'>
+        <view class='timescrollbtn {{timeindex==index?"active":""}}' wx:for="{{startTime}}" bindtap='choosetime' data-index="{{index}}">{{item%1?item-0.5:item}}:{{item%1?'30':'00'}}</view>
+      </view>
+    </view>
+    <view class='chooseData'>
+      <view class='text'>使用小时</view>
+      <view class='timescroll'>
+        <view class='timescrollbtn {{usetimeindex==index?"active":""}}' wx:for="{{usetime}}" bindtap='chooseusetime' data-index="{{index}}">{{item}}</view>
+      </view>
+    </view>
+     <view class='bottombtn red queding' bindtap="queding">确定</view>
+  </view>
+  <view class='already'>
+  <view class='text'>已选择的时段<text class='redtip'>（重复时段将自动删除）</text></view>
+  <view class='chooseData' style='width:100%;padding-top:10rpx;'>
+      <view class='chooselist' wx:for="{{chooselist}}">
+        <text>{{item}}</text>
+        <view class='bottombtn black' bindtap="deletechooselist" data-index="{{index}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class='lf0' style='position:fixed;bottom:10rpx;left:0rpx;width:100%;'>
+    <view class='bottombtn gray' bindtap="resetActiveDay">重选</view>
+    <view class='bottombtn red' bindtap="putActiveDay">确定</view>
+  </view>
+  <!-- 自定义弹窗 -->
+<view class="showModule" wx:if="{{isShow}}">
+ <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
+ <view class="text ">{{text}}</view>
+</view>
+</view>

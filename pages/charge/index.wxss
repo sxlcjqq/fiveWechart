@@ -1,0 +1,159 @@
+/**index.wxss**/
+.swiper {
+  height: 900rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.widthimage{
+  height: 300rpx;
+  display: block;
+  width: 100%;
+}
+page{
+  height: 100%;
+}
+.container{
+padding-bottom:80rpx;
+height: 100%;
+overflow: hidden;
+}
+.courselist{
+  height:100%;overflow:auto;
+}
+button[type="primary"] {
+margin-top:40rpx;
+margin-left: 20rpx;
+margin-right: 20rpx;
+}
+.fldiv{
+padding:10rpx 15rpx;
+  width:33.33%;
+  display: inline-block;
+}
+.flbtn{
+  padding:10rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+  background: #ffffff;
+  text-align: center;
+  border:1px solid #000000;
+}
+.fldiv.active .flbtn{
+  color:#ff4444;
+  border-color: #ff4444;
+}
+.clear{
+  font-size: 0;
+  line-height: 0;
+  margin:20rpx;
+}
+.tip{
+  width:33.33%;
+  font-size:28rpx;
+  color:#333333;
+  line-height:2.5;
+  text-align:center;
+  display:inline-block;
+}
+.tip.active{
+  border-bottom:4rpx solid #2d8cf0;
+  color: #2d8cf0;
+}
+.listcon{
+  padding:0 40rpx;
+}
+.listcons{
+  margin: 40rpx 0;
+  font-size: 32rpx;
+  line-height: 1.5;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #999999;
+}
+.listdiv{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  padding: 20rpx 0rpx;
+  border-bottom:1rpx solid #999999;
+}
+.listdiv .bg{
+  display: block;
+  height: 400rpx;
+  width: 100%;
+}
+.listdiv .price{
+  right: 0rpx;
+  top: 340rpx;
+  position: absolute;
+  font-size: 34rpx;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  padding:10rpx 20rpx;
+  background: rgba(0,0,0,0.5);
+}
+.listdiv .name{
+  font-size: 34rpx;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.listdiv .area{
+  font-size: 20rpx;
+  color: #666666;
+  line-height: 1.5;
+  border: 1rpx solid #999999;
+  padding:5rpx 10rpx;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+}
+.listdiv .star{
+width: 45rpx;
+height: 45rpx;
+display: inline-block;
+margin: 10rpx 0 0;
+vertical-align: middle;
+}
+.listdiv .address{
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 1.5;
+  margin-top:10rpx;
+}
+.titleuser{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  color: #000000;
+  line-height: 2;
+}
+.titleuser image{
+  display: block;
+  margin:  auto;
+  background-color: #ffffff;
+}
+.f_red{
+  color: #ff4444;
+  font-size: 28rpx;
+}
+.bottomzhi{
+  position:absolute;bottom:0;left:0rpx;width:100%;font-size:28rpx;color:#000000;line-height:2;background:#ececec;
+  margin: 0;padding:10rpx 20rpx;
+}
+.zhifugreen{
+  float:right;
+  padding:5rpx 20rpx;
+  font-size: 24rpx;
+  background-color: green;
+  border-radius: 10rpx;
+  line-height: 1.5;
+  color:#ffffff;
+  margin-top:10rpx;
+}

@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='courselist'>
+    <view class='listdiv'>
+      <image class="bg" src="{{classlist.url}}"></image>
+      <view style='margin:0 20rpx 20rpx;padding-bottom:20rpx;border-bottom:8rpx double #999999;'>
+        <view style='padding-top:10rpx;'>
+          <text class='name'>{{classlist.name}}</text>
+          <text class='area'>{{classlist.area}}</text>
+        <text class='price fr'>￥{{classlist.price}}</text>
+        </view>
+        <view>
+          <image wx:for="{{classlist.starts}}" class='star' src="../../../image/star.png"></image>
+        </view>
+        <view class='address'>{{classlist.address}}</view>
+      </view>
+      <view class="oneline">
+        <view class="picker f30" bindtap="bindTimeChange">
+          日期： {{dateshow}}
+        </view>
+      </view>
+      <view class="oneline">
+        <view class="picker f30" bindtap="bindTimeChange">
+          时间： {{timeshow}}
+        </view>
+      </view>
+
+      <view class='text-center' style='padding:20rpx 0;'>
+        <image class='iconimg' src="../../../image/people.png"></image>
+        <text class='f30'>使用人数</text>
+        <view class='lf0 text-left' style='padding:10rpx;margin:10rpx;'>
+          <view class='list listborder' wx:for="{{persondata}}" bindtap="setPerson" data-index="{{index}}">
+            <image class='listimg' src='{{(personindex==index?"../../../image/gou.png":"../../../image/kong.png")}}'></image>
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;border-top:1px solid #999999;'>
+        <text class='f30'>教室详情</text>
+      </view>
+      <view style='padding:20rpx 20rpx;'>
+        <view class='exclass'>
+          <view class='bottomtext'>
+            <view class='span'>大型教室</view>
+            <view class='span'>18m²</view>
+            <view class='span'>9人</view>
+            <view class='span'>￥100/小时</view>
+          </view>
+          <image src="{{movies[0].url}}" class="widthimage" mode="aspectFill" />
+        </view>
+        <view class='exclass'>
+          <view class='bottomtext'>
+            <view class='span'>大型教室</view>
+            <view class='span'>18m²</view>
+            <view class='span'>9人</view>
+            <view class='span'>￥100/小时</view>
+          </view>
+          <image src="{{movies[0].url}}" class="widthimage" mode="aspectFill" />
+        </view>
+      </view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;border-top:1px solid #999999;'>
+      <text class='f30'>便利设施</text>
+    </view>
+    <view class='lf0 text-left' style='padding:10rpx;margin:10rpx;'>
+      <view class='list listborder detail' wx:for="{{classlist.sheshi}}" style='width:50%;'>
+        <image class='listimg big' src='{{item}}'></image>
+        {{index}}
+      </view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;'>
+      <text class='f30'>机构介绍</text>
+      <view class='detailtext'>机构介绍机构介绍机构介绍机构介绍</view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;'>
+      <text class='f30'>退订政策</text>
+      <view class='detailtext'>机构介绍机构介绍机构介绍机构介绍</view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;'>
+      <text class='f30'>交通信息</text>
+      <view class='detailtext'>机构介绍机构介绍机构介绍机构介绍</view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;'>
+      <text class='f30'>场地使用政策</text>
+      <view class='detailtext'>机构介绍机构介绍机构介绍机构介绍</view>
+    </view>
+    <view class='text-center' style='margin:10rpx 20rpx 0;padding:20rpx 0 0;border-top:1px solid #999999;'>
+      <text class='f30'>地理位置</text>
+    </view>
+    <view class="map_container">
+      <map style="width: 100%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" covers="{{covers}}">
+      </map>
+    </view>
+  </view>
+  <view class='lf0' style='position:absolute;bottom:10rpx;left:0rpx;width:100%;'>
+    <view class='bottombtn red' bindtap="putActiveDay">退订</view>
+  </view>
+</view>

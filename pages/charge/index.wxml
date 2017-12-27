@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='courselist'>
+    <view>
+      <image src="/image/joinbg.jpg" class="widthimage" mode="aspectFill" />
+    </view>
+    <view style='font-size:0;line-height:0;background: #ececec;padding:20rpx 10rpx;'>
+      <view class='fldiv {{index==priceIndex?"active":""}}' bindtap='showPriceActive' wx:for="{{Pricelist}}" data-index="{{index}}">
+        <view class='flbtn'>
+          <text>￥{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='clear bottomzhi' >
+    支付:
+    <text class='f_red'>￥{{showPrice}}</text>
+    <view class='zhifugreen'>微信支付</view>
+  </view>
+</view>

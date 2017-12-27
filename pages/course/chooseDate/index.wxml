@@ -1,0 +1,102 @@
+<view class="  box-align-center" style='padding-top:75rpx;padding-bottom:80rpx;position:relative;height:100%;'>
+
+  <view class="weeks box box-lr box-pack-center box-align-center">
+    <view class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+  </view>
+  <view style='height:100%;overflow:auto;'>
+    <view class="flex calendar pink-color box box-tb">
+
+      <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+        <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+
+      </view>
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="0">
+          <view class="day {{activeday['0'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center {{item.day<=cur_day?'unclick':''}}">{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex calendar pink-color box box-tb">
+
+      <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+        <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year1 || "--"}} 年 {{cur_month1 || "--"}} 月</view>
+
+      </view>
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid1}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids1}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days1}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="1">
+          <view class="day {{activeday['1'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center ">{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex calendar pink-color box box-tb">
+
+      <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+        <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year2 || "--"}} 年 {{cur_month2 || "--"}} 月</view>
+
+      </view>
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid2}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids2}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days2}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="2">
+          <view class="day {{activeday['2'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center ">{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex calendar pink-color box box-tb">
+
+      <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+        <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year3 || "--"}} 年 {{cur_month3 || "--"}} 月</view>
+
+      </view>
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid3}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids3}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days3}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="3">
+          <view class="day {{activeday['3'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center ">{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+  <view class="flex calendar pink-color box box-tb">
+
+    <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+      <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year4 || "--"}} 年 {{cur_month4 || "--"}} 月</view>
+
+    </view>
+    <view class="days box box-lr box-wrap">
+      <view wx:if="{{hasEmptyGrid4}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids4}}" wx:key="{{index}}" data-idx="{{index}}">
+      </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days4}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="4">
+          <view class="day {{activeday['4'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center ">{{item.day}}</view>
+        </view>
+    </view>
+  </view>
+<view class="flex calendar pink-color box box-tb">
+
+  <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+
+    <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year5 || "--"}} 年 {{cur_month5 || "--"}} 月</view>
+
+  </view>
+  <view class="days box box-lr box-wrap">
+    <view wx:if="{{hasEmptyGrid5}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids5}}" wx:key="{{index}}" data-idx="{{index}}">
+    </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days5}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem" data-day="{{item.day}}" data-index="5">
+          <view class="day {{activeday['5'][item.day]? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center ">{{item.day}}</view>
+        </view>
+  </view>
+</view>
+</view>
+<view class='lf0' style='position:fixed;bottom:10rpx;left:0rpx;width:100%;'>
+  <view class='bottombtn gray' bindtap="resetActiveDay" >重选</view>
+  <view class='bottombtn red' bindtap="putActiveDay" >确定</view>
+</view>
+</view>

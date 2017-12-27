@@ -1,0 +1,72 @@
+<!--pages/course/screening/index.wxml-->
+
+<view class="container">
+ <view class="oneline">
+    <picker  value="{{index}}" range="{{datelist}}" bindchange="bindDateChange">
+      <view class="picker f30">
+        日期： {{dateshow}}
+         <icon type="clear" style='float:right;'  catchtap="clearDate" />
+      </view>
+    </picker>
+  </view>
+ <view class="oneline">
+      <view class="picker f30" bindtap="bindTimeChange">
+        时间： {{timeshow}}
+         <icon type="clear" style='float:right;'  catchtap="clearDate" />
+      </view>
+  </view>
+ 
+  <view class='text-center' style='padding:10rpx 0;'>
+    <image class='iconimg' src="../../../image/people.png"></image>
+    <text class='f30' >使用人数</text>
+    <view class='lf0 text-left'  style='padding:10rpx;margin:10rpx;'>
+      <view class='list listborder' wx:for="{{persondata}}" bindtap="setPerson" data-index="{{index}}">
+        <image class='listimg' src='{{(personindex==index?"../../../image/gou.png":"../../../image/kong.png")}}'></image>
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <view class='text-center' style='padding:10rpx 0;'>
+    <image class='iconimg' src="../../../image/price.png"></image>
+    <text class='f30' >价格区间</text>
+    <view class='lf0 text-left'  style='padding:10rpx;margin:10rpx;'>
+      <view class='list listborder' style="width:50%;" wx:for="{{pricedata}}" bindtap="setPrice" data-index="{{index}}">
+        <image class='listimg' src='{{(priceindex==index?"../../../image/gou.png":"../../../image/kong.png")}}'></image>
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <view class='text-center' style='padding:10rpx 0;'>
+    <image class='iconimg' src="../../../image/price.png"></image>
+    <text class='f30' >配套设施</text>
+    <view class='lf0 text-left'  style='padding:10rpx;margin:10rpx;'>
+      <view class='list {{otherindex[index]?"active":""}}'  wx:for="{{otherdata}}" bindtap="setOther" data-index="{{index}}">
+       <view class='block'>{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary" > 筛选 </button>
+</view>
+
+  <!-- 自定义弹窗 -->
+<view class="showModule" wx:if="{{isShow}}">
+ <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
+ <view class="text ">{{text}}</view>
+</view>
+ <!-- <view class="oneline">
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker f30">
+        日期： {{date}}
+         <icon type="clear" style='float:right;'  catchtap="clearDate" />
+      </view>
+    </picker>
+  </view>
+  <view class="oneline">
+    <picker mode="time" value="{{time}}" start="09:01" end="22:01" bindchange="bindTimeChange">
+      <view class="picker f30">
+        时间： {{time}}
+        <icon type="clear" style='float:right;'  catchtap="clearTime" />
+      </view>
+    </picker>
+  </view> -->

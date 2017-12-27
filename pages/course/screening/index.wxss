@@ -1,0 +1,52 @@
+/* pages/course/screening/index.wxss */
+.iconimg{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx 15rpx 5rpx 0;
+}
+.f30{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.oneline{
+  padding: 10rpx;
+  margin: 10rpx;
+  border:1rpx solid #333;
+  border-radius: 5rpx;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+.list{
+ font-size: 30rpx;
+ color: #333333;
+ padding-left: 40rpx;
+ width: 25%;
+ padding: 15rpx;
+ display: inline-block;
+ vertical-align: top;
+  line-height: 2;
+}
+.listborder{
+  border-bottom:1rpx solid #333333;
+}
+.list .listimg{
+  width: 25rpx;
+  height: 25rpx;
+}
+.list .block{
+border:1px solid #333333;
+padding:0 5rpx;
+border-radius: 5rpx;
+text-align: center;
+}
+.list.active .block{
+border:1px solid #ff4444;
+color:#ff4444;
+}
+button[type="primary"] {
+color:#FFFFFF;
+background-color:#ff4444;
+margin:20rpx 10rpx 10rpx;
+}

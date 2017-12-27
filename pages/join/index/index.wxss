@@ -1,0 +1,134 @@
+/**index.wxss**/
+.swiper {
+  height: 900rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.widthimage{
+  height: 300rpx;
+  display: block;
+  width: 100%;
+}
+button[type="primary"] {
+margin-top:40rpx;
+margin-left: 20rpx;
+margin-right: 20rpx;
+}
+.fldiv{
+padding:10rpx 15rpx;
+  width:33.33%;
+  display: inline-block;
+}
+.flbtn{
+  padding:10rpx;
+  font-size: 20rpx;
+  line-height: 1.5;
+  background: #ffffff;
+  text-align: center;
+}
+.flbtn image{
+  width: 50rpx;
+  height:50rpx;
+  display: block;
+  margin: 10rpx auto 5rpx;
+}
+.clear{
+  font-size: 0;
+  line-height: 0;
+  margin:20rpx;
+}
+.tip{
+  width:33.33%;
+  font-size:28rpx;
+  color:#333333;
+  line-height:2.5;
+  text-align:center;
+  display:inline-block;
+}
+.tip.active{
+  border-bottom:4rpx solid #2d8cf0;
+  color: #2d8cf0;
+}
+.listcon{
+  padding:0 40rpx;
+}
+.listcons{
+  margin: 40rpx 0;
+  font-size: 32rpx;
+  line-height: 1.5;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #999999;
+}
+.courselist{
+  padding:0 20rpx;
+}
+.listdiv{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  padding: 20rpx 0rpx;
+  border-bottom:1rpx solid #999999;
+}
+.listdiv .bg{
+  display: block;
+  height: 400rpx;
+  width: 100%;
+}
+.listdiv .price{
+  right: 0rpx;
+  top: 340rpx;
+  position: absolute;
+  font-size: 34rpx;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  padding:10rpx 20rpx;
+  background: rgba(0,0,0,0.5);
+}
+.listdiv .name{
+  font-size: 34rpx;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.listdiv .area{
+  font-size: 20rpx;
+  color: #666666;
+  line-height: 1.5;
+  border: 1rpx solid #999999;
+  padding:5rpx 10rpx;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+}
+.listdiv .star{
+width: 45rpx;
+height: 45rpx;
+display: inline-block;
+margin: 10rpx 0 0;
+vertical-align: middle;
+}
+.listdiv .address{
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 1.5;
+  margin-top:10rpx;
+}
+.titleuser{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  color: #000000;
+  line-height: 2;
+}
+.titleuser image{
+  display: block;
+  margin:  auto;
+  background-color: #ffffff;
+}

@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+<!-- <view>{{test}}</view> -->
+<view>{{area.address}}</view>
+<view class="clear" style='border-bottom:4px double #000000;border-top:4px double #000000;'>
+    <view class="tip" >
+      <picker bindchange="bindPickerChangeareas"  value="{{areas_index}}" range="{{areas}}">
+        <view class="picker">
+        <text style='color:#ff4444;font-weight:bold;'>区域</text>
+          {{areas[areas_index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="tip" >
+      <picker bindchange="bindPickerChangeareastype" value="{{areastype_index}}" range="{{areastype}}">
+        <view class="picker">
+        <text style='color:#ff4444;font-weight:bold;'>场地</text>
+          {{areastype[areastype_index]}}
+        </view>
+      </picker></view>
+    <view class="tip"  bindtap="toscreening">更多筛选</view>
+  </view>
+  <view style=''>
+    <image src="{{movies[0].url}}" class="widthimage" mode="aspectFill"/> 
+  </view>
+  
+ <!-- <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">    
+      <block wx:for="{{movies}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+  </swiper>  -->
+<!-- <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary" > 更多课程 </button>-->
+<!-- <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="getLocation" > 获取位置 </button>  -->
+        <view style='font-size:0;line-height:0;background: #ececec;padding:5rpx 10rpx;'>
+          <view class='fldiv' bindtap='showcourselist'>
+            <view class='flbtn'>
+              <image src='../../../image/icona_5.png'></image>
+              <text>热门</text>
+            </view>
+          </view>
+          <view class='fldiv' bindtap='showcourselist'>
+            <view class='flbtn'>
+              <image src='../../../image/icona_6.png'></image>
+              <text>推荐</text>
+            </view>
+          </view>
+          <view class='fldiv' bindtap='showcourselist'>
+            <view class='flbtn'>
+                <image src='../../../image/icona_7.png'></image>
+                <text>最新</text>
+              </view>
+            </view>
+        </view>
+        <view class='courselist' >
+          <view class='listdiv' wx:for="{{classlist}}" bindtap='toCourseDetail'>
+              <image class="bg" src="{{item.url}}"></image>
+              <text class='price'>￥{{item.price}}</text>
+              <view style='padding-top:10rpx;'>
+                <text class='name'>{{item.name}}</text>
+                <text class='area'>{{item.area}}</text>
+              </view>
+              <view>
+                <image wx:for="{{item.starts}}" class='star' src="../../../image/star.png"></image>
+              </view>
+              <view class='address'>{{item.address}}</view>
+          </view>
+        </view>
+</view>

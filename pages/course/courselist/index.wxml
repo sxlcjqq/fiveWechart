@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='courselist' >
+    <view class='listdiv' wx:for="{{classlist}}" bindtap='toCourseDetail'>
+        <image class="bg" src="{{item.url}}"></image>
+        <text class='price'>￥{{item.price}}</text>
+        <view style='padding-top:10rpx;'>
+          <text class='name'>{{item.name}}</text>
+          <text class='area'>{{item.area}}</text>
+        </view>
+        <view>
+          <image wx:for="{{item.starts}}" class='star' src="../../../image/star.png"></image>
+        </view>
+        <view class='address'>{{item.address}}</view>
+    </view>
+  </view>
+</view>
